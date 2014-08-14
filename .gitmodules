@@ -1,0 +1,3 @@
+[submodule "Plugin/CakePHP-CSV"]
+	path = Plugin/CakePHP-CSV
+	url = https://github.com/ProLoser/CakePHP-CSV.git

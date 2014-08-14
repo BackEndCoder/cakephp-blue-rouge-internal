@@ -41,6 +41,9 @@ class AppController extends Controller {
  *
  * @var array
  */
+
+	public $theme = "Cakestrap";
+
 	public $components = [
 		'RequestHandler',
 		'Session',
@@ -62,6 +65,5 @@ class AppController extends Controller {
 	);
 
 	public function beforeFilter() {
-		$this->layout = 'bootstrap3';
 	}
 }
