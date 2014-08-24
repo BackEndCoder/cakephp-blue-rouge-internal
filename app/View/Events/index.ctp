@@ -28,7 +28,7 @@
 							<th><?php echo $this->Paginator->sort('id'); ?></th>
 							<th><?php echo $this->Paginator->sort('name'); ?></th>
 							<th><?php echo $this->Paginator->sort('created'); ?></th>
-							<th><?php echo $this->Paginator->sort('modifed'); ?></th>
+							<th><?php echo $this->Paginator->sort('modified'); ?></th>
 							<th class="actions"><?php echo __('Actions'); ?></th>
 						</tr>
 					</thead>
@@ -38,7 +38,7 @@
 		<td><?php echo h($event['Event']['id']); ?>&nbsp;</td>
 		<td><?php echo h($event['Event']['name']); ?>&nbsp;</td>
 		<td><?php echo h($event['Event']['created']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['modifed']); ?>&nbsp;</td>
+		<td><?php echo h($event['Event']['modified']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $event['Event']['id']), array('class' => 'btn btn-default btn-xs')); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $event['Event']['id']), array('class' => 'btn btn-default btn-xs')); ?>

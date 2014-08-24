@@ -43,9 +43,9 @@
 			<?php echo h($event['Event']['created']); ?>
 			&nbsp;
 		</td>
-</tr><tr>		<td><strong><?php echo __('Modifed'); ?></strong></td>
+</tr><tr>		<td><strong><?php echo __('Modified'); ?></strong></td>
 		<td>
-			<?php echo h($event['Event']['modifed']); ?>
+			<?php echo h($event['Event']['modified']); ?>
 			&nbsp;
 		</td>
 </tr>					</tbody>
