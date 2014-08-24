@@ -109,4 +109,18 @@ class CustomersController extends AppController {
 		$this->Session->setFlash(__('Customer was not deleted'), 'flash/error');
 		$this->redirect(array('action' => 'index'));
 	}
+
+	public function import() {
+		if ($this->request->is('post')) {
+			$this->Customer->create();
+			$this->Customer->importCSV($this->request->data['Customer']['file']['tmp_name']);
+			debug($this->Customer->getImportErrors());
+			#if ($this->Customer->save($this->request->data)) {
+			#	$this->Session->setFlash(__('The customer has been saved'), 'flash/success');
+			#	$this->redirect(array('action' => 'index'));
+			#} else {
+			#	$this->Session->setFlash(__('The customer could not be saved. Please, try again.'), 'flash/error');
+			#}
+		}
+	}
 }

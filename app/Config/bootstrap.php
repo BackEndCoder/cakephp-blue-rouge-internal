@@ -82,6 +82,7 @@ CakePlugin::load('Users');
 CakePlugin::load('Migrations');
 CakePlugin::load('Search');
 CakePlugin::load('Csv');
+CakePlugin::load('Utils');
 
 if (php_sapi_name() !== 'cli' && Configure::read('debug') && in_array('DebugKit', App::objects('plugin'))) {
 	CakePlugin::load('DebugKit');

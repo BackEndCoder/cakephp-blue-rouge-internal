@@ -8,6 +8,8 @@ App::uses('AppModel', 'Model');
  */
 class Customer extends AppModel {
 
+	public $actsAs = array('Utils.CsvImport');
+
 /**
  * Validation rules
  *
@@ -15,6 +17,10 @@ class Customer extends AppModel {
  */
 	public $validate = array(
 		'email' => array(
+			'unique' => array(
+		        'rule' => 'isUnique',
+		        'required' => 'create'
+    		),
 			'email' => array(
 				'rule' => array('email'),
 				//'message' => 'Your custom message here',

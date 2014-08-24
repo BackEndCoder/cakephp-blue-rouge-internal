@@ -58,6 +58,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			
 			<div id="footer" class="container">
 				<?php //Silence is golden ?>
+				Copyright &copy; Steve Coverdale
 			</div><!-- /#footer .container -->
 			
 		</div><!-- /#main-container -->
@@ -65,7 +66,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<div class="container">
 			<div class="well well-sm">
 				<small>
-					<?php echo $this->element('sql_dump'); ?>
 				</small>
 			</div><!-- /.well well-sm -->
 		</div><!-- /.container -->
