@@ -114,13 +114,13 @@ class CustomersController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Customer->create();
 			$this->Customer->importCSV($this->request->data['Customer']['file']['tmp_name']);
-			debug($this->Customer->getImportErrors());
-			#if ($this->Customer->save($this->request->data)) {
-			#	$this->Session->setFlash(__('The customer has been saved'), 'flash/success');
-			#	$this->redirect(array('action' => 'index'));
-			#} else {
-			#	$this->Session->setFlash(__('The customer could not be saved. Please, try again.'), 'flash/error');
-			#}
+			if (empty($this->Customer->getImportErrors())) {
+				$this->Session->setFlash(__('The customers have been imported'), 'flash/success');
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The customers have not been imported. Please, try again.'), 'flash/error');
+				debug($this->Customer->getImportErrors());
+			}
 		}
 	}
 }
