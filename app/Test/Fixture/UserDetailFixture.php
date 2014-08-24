@@ -35,7 +35,7 @@ class UserDetailFixture extends CakeTestFixture {
  */
 	public $records = array(
 		array(
-			'id' => '53ecd2cf-6150-42e7-a738-015bcd6ccd5b',
+			'id' => '53fa0123-e770-467f-93f3-34ffcd6ccd5b',
 			'user_id' => 'Lorem ipsum dolor sit amet',
 			'position' => 1,
 			'field' => 'Lorem ipsum dolor sit amet',
@@ -43,8 +43,8 @@ class UserDetailFixture extends CakeTestFixture {
 			'input' => 'Lorem ipsum do',
 			'data_type' => 'Lorem ipsum do',
 			'label' => 'Lorem ipsum dolor sit amet',
-			'created' => '2014-08-14 15:16:31',
-			'modified' => '2014-08-14 15:16:31'
+			'created' => '2014-08-24 15:13:39',
+			'modified' => '2014-08-24 15:13:39'
 		),
 	);
 

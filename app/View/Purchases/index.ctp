@@ -32,7 +32,7 @@
 							<th><?php echo $this->Paginator->sort('customer_id'); ?></th>
 							<th><?php echo $this->Paginator->sort('spend'); ?></th>
 							<th><?php echo $this->Paginator->sort('created'); ?></th>
-							<th><?php echo $this->Paginator->sort('modifed'); ?></th>
+							<th><?php echo $this->Paginator->sort('modified'); ?></th>
 							<th class="actions"><?php echo __('Actions'); ?></th>
 						</tr>
 					</thead>
@@ -48,7 +48,7 @@
 		</td>
 		<td><?php echo h($purchase['Purchase']['spend']); ?>&nbsp;</td>
 		<td><?php echo h($purchase['Purchase']['created']); ?>&nbsp;</td>
-		<td><?php echo h($purchase['Purchase']['modifed']); ?>&nbsp;</td>
+		<td><?php echo h($purchase['Purchase']['modified']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $purchase['Purchase']['id']), array('class' => 'btn btn-default btn-xs')); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $purchase['Purchase']['id']), array('class' => 'btn btn-default btn-xs')); ?>

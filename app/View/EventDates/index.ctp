@@ -31,9 +31,10 @@
 						<tr>
 							<th><?php echo $this->Paginator->sort('id'); ?></th>
 							<th><?php echo $this->Paginator->sort('event_id'); ?></th>
+							<th><?php echo $this->Paginator->sort('event_name'); ?></th>
 							<th><?php echo $this->Paginator->sort('date'); ?></th>
 							<th><?php echo $this->Paginator->sort('created'); ?></th>
-							<th><?php echo $this->Paginator->sort('modifed'); ?></th>
+							<th><?php echo $this->Paginator->sort('modified'); ?></th>
 							<th class="actions"><?php echo __('Actions'); ?></th>
 						</tr>
 					</thead>
@@ -44,9 +45,10 @@
 		<td>
 			<?php echo $this->Html->link($eventDate['Event']['name'], array('controller' => 'events', 'action' => 'view', $eventDate['Event']['id'])); ?>
 		</td>
+		<td><?php echo h($eventDate['EventDate']['event_name']); ?>&nbsp;</td>
 		<td><?php echo h($eventDate['EventDate']['date']); ?>&nbsp;</td>
 		<td><?php echo h($eventDate['EventDate']['created']); ?>&nbsp;</td>
-		<td><?php echo h($eventDate['EventDate']['modifed']); ?>&nbsp;</td>
+		<td><?php echo h($eventDate['EventDate']['modified']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $eventDate['EventDate']['id']), array('class' => 'btn btn-default btn-xs')); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $eventDate['EventDate']['id']), array('class' => 'btn btn-default btn-xs')); ?>

@@ -42,6 +42,11 @@
 			<?php echo $this->Html->link($eventDate['Event']['name'], array('controller' => 'events', 'action' => 'view', $eventDate['Event']['id']), array('class' => '')); ?>
 			&nbsp;
 		</td>
+</tr><tr>		<td><strong><?php echo __('Event Name'); ?></strong></td>
+		<td>
+			<?php echo h($eventDate['EventDate']['event_name']); ?>
+			&nbsp;
+		</td>
 </tr><tr>		<td><strong><?php echo __('Date'); ?></strong></td>
 		<td>
 			<?php echo h($eventDate['EventDate']['date']); ?>
@@ -52,9 +57,9 @@
 			<?php echo h($eventDate['EventDate']['created']); ?>
 			&nbsp;
 		</td>
-</tr><tr>		<td><strong><?php echo __('Modifed'); ?></strong></td>
+</tr><tr>		<td><strong><?php echo __('Modified'); ?></strong></td>
 		<td>
-			<?php echo h($eventDate['EventDate']['modifed']); ?>
+			<?php echo h($eventDate['EventDate']['modified']); ?>
 			&nbsp;
 		</td>
 </tr>					</tbody>
@@ -79,7 +84,7 @@
 		<th><?php echo __('Customer Id'); ?></th>
 		<th><?php echo __('Spend'); ?></th>
 		<th><?php echo __('Created'); ?></th>
-		<th><?php echo __('Modifed'); ?></th>
+		<th><?php echo __('Modified'); ?></th>
 									<th class="actions"><?php echo __('Actions'); ?></th>
 								</tr>
 							</thead>
@@ -93,7 +98,7 @@
 			<td><?php echo $purchase['customer_id']; ?></td>
 			<td><?php echo $purchase['spend']; ?></td>
 			<td><?php echo $purchase['created']; ?></td>
-			<td><?php echo $purchase['modifed']; ?></td>
+			<td><?php echo $purchase['modified']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'purchases', 'action' => 'view', $purchase['id']), array('class' => 'btn btn-default btn-xs')); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'purchases', 'action' => 'edit', $purchase['id']), array('class' => 'btn btn-default btn-xs')); ?>

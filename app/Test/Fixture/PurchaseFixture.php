@@ -13,7 +13,7 @@ class PurchaseFixture extends CakeTestFixture {
 	public $fields = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary'),
 		'event_date_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
-		'client_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
+		'customer_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
 		'spend' => array('type' => 'decimal', 'null' => false, 'default' => null, 'length' => '10,2', 'unsigned' => false),
 		'created' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'modifed' => array('type' => 'datetime', 'null' => false, 'default' => null),
@@ -32,10 +32,10 @@ class PurchaseFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'event_date_id' => 1,
-			'client_id' => 1,
+			'customer_id' => 1,
 			'spend' => '',
-			'created' => '2014-07-29 19:25:10',
-			'modifed' => '2014-07-29 19:25:10'
+			'created' => '2014-08-24 15:13:39',
+			'modifed' => '2014-08-24 15:13:39'
 		),
 	);
 

@@ -38,10 +38,10 @@
 	<tr>
 		<td><?php echo h($customersEventDate['CustomersEventDate']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($customersEventDate['Customer']['first_name'] . ' ' . $customersEventDate['Customer']['last_name'], array('controller' => 'customers', 'action' => 'view', $customersEventDate['Customer']['id'])); ?>
+			<?php echo $this->Html->link($customersEventDate['Customer']['title'], array('controller' => 'customers', 'action' => 'view', $customersEventDate['Customer']['id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($customersEventDate['EventDate']['date'], array('controller' => 'event_dates', 'action' => 'view', $customersEventDate['EventDate']['id'])); ?>
+			<?php echo $this->Html->link($customersEventDate['EventDate']['id'], array('controller' => 'event_dates', 'action' => 'view', $customersEventDate['EventDate']['id'])); ?>
 		</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $customersEventDate['CustomersEventDate']['id']), array('class' => 'btn btn-default btn-xs')); ?>

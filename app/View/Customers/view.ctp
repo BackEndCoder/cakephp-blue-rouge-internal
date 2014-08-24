@@ -12,6 +12,8 @@
 		<li class="list-group-item"><?php echo $this->Html->link(__('New Customer'), array('action' => 'add'), array('class' => '')); ?> </li>
 		<li class="list-group-item"><?php echo $this->Html->link(__('List Purchases'), array('controller' => 'purchases', 'action' => 'index'), array('class' => '')); ?> </li>
 		<li class="list-group-item"><?php echo $this->Html->link(__('New Purchase'), array('controller' => 'purchases', 'action' => 'add'), array('class' => '')); ?> </li>
+		<li class="list-group-item"><?php echo $this->Html->link(__('List Event Dates'), array('controller' => 'event_dates', 'action' => 'index'), array('class' => '')); ?> </li>
+		<li class="list-group-item"><?php echo $this->Html->link(__('New Event Date'), array('controller' => 'event_dates', 'action' => 'add'), array('class' => '')); ?> </li>
 				
 			</ul><!-- /.list-group -->
 			
@@ -95,7 +97,7 @@
 		<th><?php echo __('Customer Id'); ?></th>
 		<th><?php echo __('Spend'); ?></th>
 		<th><?php echo __('Created'); ?></th>
-		<th><?php echo __('Modifed'); ?></th>
+		<th><?php echo __('Modified'); ?></th>
 									<th class="actions"><?php echo __('Actions'); ?></th>
 								</tr>
 							</thead>
@@ -109,7 +111,7 @@
 			<td><?php echo $purchase['customer_id']; ?></td>
 			<td><?php echo $purchase['spend']; ?></td>
 			<td><?php echo $purchase['created']; ?></td>
-			<td><?php echo $purchase['modifed']; ?></td>
+			<td><?php echo $purchase['modified']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'purchases', 'action' => 'view', $purchase['id']), array('class' => 'btn btn-default btn-xs')); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'purchases', 'action' => 'edit', $purchase['id']), array('class' => 'btn btn-default btn-xs')); ?>
@@ -126,6 +128,56 @@
 				
 				<div class="actions">
 					<?php echo $this->Html->link('<i class="icon-plus icon-white"></i> '.__('New Purchase'), array('controller' => 'purchases', 'action' => 'add'), array('class' => 'btn btn-primary', 'escape' => false)); ?>				</div><!-- /.actions -->
+				
+			</div><!-- /.related -->
+
+					
+			<div class="related">
+
+				<h3><?php echo __('Related Event Dates'); ?></h3>
+				
+				<?php if (!empty($customer['EventDate'])): ?>
+					
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered">
+							<thead>
+								<tr>
+											<th><?php echo __('Id'); ?></th>
+		<th><?php echo __('Event Id'); ?></th>
+		<th><?php echo __('Event Name'); ?></th>
+		<th><?php echo __('Date'); ?></th>
+		<th><?php echo __('Created'); ?></th>
+		<th><?php echo __('Modified'); ?></th>
+									<th class="actions"><?php echo __('Actions'); ?></th>
+								</tr>
+							</thead>
+							<tbody>
+									<?php
+										$i = 0;
+										foreach ($customer['EventDate'] as $eventDate): ?>
+		<tr>
+			<td><?php echo $eventDate['id']; ?></td>
+			<td><?php echo $eventDate['event_id']; ?></td>
+			<td><?php echo $eventDate['event_name']; ?></td>
+			<td><?php echo $eventDate['date']; ?></td>
+			<td><?php echo $eventDate['created']; ?></td>
+			<td><?php echo $eventDate['modified']; ?></td>
+			<td class="actions">
+				<?php echo $this->Html->link(__('View'), array('controller' => 'event_dates', 'action' => 'view', $eventDate['id']), array('class' => 'btn btn-default btn-xs')); ?>
+				<?php echo $this->Html->link(__('Edit'), array('controller' => 'event_dates', 'action' => 'edit', $eventDate['id']), array('class' => 'btn btn-default btn-xs')); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'event_dates', 'action' => 'delete', $eventDate['id']), array('class' => 'btn btn-default btn-xs'), __('Are you sure you want to delete # %s?', $eventDate['id'])); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+							</tbody>
+						</table><!-- /.table table-striped table-bordered -->
+					</div><!-- /.table-responsive -->
+					
+				<?php endif; ?>
+
+				
+				<div class="actions">
+					<?php echo $this->Html->link('<i class="icon-plus icon-white"></i> '.__('New Event Date'), array('controller' => 'event_dates', 'action' => 'add'), array('class' => 'btn btn-primary', 'escape' => false)); ?>				</div><!-- /.actions -->
 				
 			</div><!-- /.related -->
 

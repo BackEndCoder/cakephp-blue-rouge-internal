@@ -30,8 +30,8 @@ class EventFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
-			'created' => '2014-07-29 19:24:05',
-			'modifed' => '2014-07-29 19:24:05'
+			'created' => '2014-08-24 15:13:39',
+			'modifed' => '2014-08-24 15:13:39'
 		),
 	);
 

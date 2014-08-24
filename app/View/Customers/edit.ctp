@@ -10,6 +10,8 @@
 				<li class="list-group-item"><?php echo $this->Html->link(__('List Customers'), array('action' => 'index')); ?></li>
 				<li class="list-group-item"><?php echo $this->Html->link(__('List Purchases'), array('controller' => 'purchases', 'action' => 'index')); ?> </li>
 				<li class="list-group-item"><?php echo $this->Html->link(__('New Purchase'), array('controller' => 'purchases', 'action' => 'add')); ?> </li>
+				<li class="list-group-item"><?php echo $this->Html->link(__('List Event Dates'), array('controller' => 'event_dates', 'action' => 'index')); ?> </li>
+				<li class="list-group-item"><?php echo $this->Html->link(__('New Event Date'), array('controller' => 'event_dates', 'action' => 'add')); ?> </li>
 			</ul><!-- /.list-group -->
 		
 		</div><!-- /.actions -->
@@ -46,6 +48,9 @@
 					</div><!-- .form-group -->
 					<div class="form-group">
 						<?php echo $this->Form->input('postcode', array('class' => 'form-control')); ?>
+					</div><!-- .form-group -->
+					<div class="form-group">
+							<?php echo $this->Form->input('EventDate');?>
 					</div><!-- .form-group -->
 
 					<?php echo $this->Form->submit('Submit', array('class' => 'btn btn-large btn-primary')); ?>

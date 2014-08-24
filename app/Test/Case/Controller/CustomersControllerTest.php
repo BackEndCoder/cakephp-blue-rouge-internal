@@ -16,7 +16,8 @@ class CustomersControllerTest extends ControllerTestCase {
 		'app.customer',
 		'app.purchase',
 		'app.event_date',
-		'app.event'
+		'app.event',
+		'app.customers_event_date'
 	);
 
 /**

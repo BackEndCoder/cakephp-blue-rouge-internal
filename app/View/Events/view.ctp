@@ -67,9 +67,10 @@
 								<tr>
 											<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Event Id'); ?></th>
+		<th><?php echo __('Event Name'); ?></th>
 		<th><?php echo __('Date'); ?></th>
 		<th><?php echo __('Created'); ?></th>
-		<th><?php echo __('Modifed'); ?></th>
+		<th><?php echo __('Modified'); ?></th>
 									<th class="actions"><?php echo __('Actions'); ?></th>
 								</tr>
 							</thead>
@@ -80,9 +81,10 @@
 		<tr>
 			<td><?php echo $eventDate['id']; ?></td>
 			<td><?php echo $eventDate['event_id']; ?></td>
+			<td><?php echo $eventDate['event_name']; ?></td>
 			<td><?php echo $eventDate['date']; ?></td>
 			<td><?php echo $eventDate['created']; ?></td>
-			<td><?php echo $eventDate['modifed']; ?></td>
+			<td><?php echo $eventDate['modified']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'event_dates', 'action' => 'view', $eventDate['id']), array('class' => 'btn btn-default btn-xs')); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'event_dates', 'action' => 'edit', $eventDate['id']), array('class' => 'btn btn-default btn-xs')); ?>

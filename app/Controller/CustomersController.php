@@ -55,6 +55,8 @@ class CustomersController extends AppController {
 				$this->Session->setFlash(__('The customer could not be saved. Please, try again.'), 'flash/error');
 			}
 		}
+		$eventDates = $this->Customer->EventDate->find('list');
+		$this->set(compact('eventDates'));
 	}
 
 /**
@@ -80,6 +82,8 @@ class CustomersController extends AppController {
 			$options = array('conditions' => array('Customer.' . $this->Customer->primaryKey => $id));
 			$this->request->data = $this->Customer->find('first', $options);
 		}
+		$eventDates = $this->Customer->EventDate->find('list');
+		$this->set(compact('eventDates'));
 	}
 
 /**

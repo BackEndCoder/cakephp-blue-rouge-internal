@@ -13,9 +13,10 @@ class EventDateFixture extends CakeTestFixture {
 	public $fields = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary'),
 		'event_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'index'),
+		'event_name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 32, 'collate' => 'latin1_swedish_ci', 'charset' => 'latin1'),
 		'date' => array('type' => 'date', 'null' => false, 'default' => null),
 		'created' => array('type' => 'datetime', 'null' => false, 'default' => null),
-		'modifed' => array('type' => 'datetime', 'null' => false, 'default' => null),
+		'modified' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1),
 			'event_id' => array('column' => 'event_id', 'unique' => 0)
@@ -32,9 +33,10 @@ class EventDateFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'event_id' => 1,
-			'date' => '2014-07-29',
-			'created' => '2014-07-29 19:23:29',
-			'modifed' => '2014-07-29 19:23:29'
+			'event_name' => 'Lorem ipsum dolor sit amet',
+			'date' => '2014-08-24',
+			'created' => '2014-08-24 15:13:39',
+			'modified' => '2014-08-24 15:13:39'
 		),
 	);
 

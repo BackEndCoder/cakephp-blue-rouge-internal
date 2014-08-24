@@ -16,7 +16,8 @@ class PurchaseTest extends CakeTestCase {
 		'app.purchase',
 		'app.event_date',
 		'app.event',
-		'app.client'
+		'app.customer',
+		'app.customers_event_date'
 	);
 
 /**

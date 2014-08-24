@@ -37,10 +37,10 @@
 						<?php echo $this->Form->input('event_id', array('class' => 'form-control')); ?>
 					</div><!-- .form-group -->
 					<div class="form-group">
-						<?php echo $this->Form->input('date', array('class' => 'form-control')); ?>
+						<?php echo $this->Form->input('event_name', array('class' => 'form-control')); ?>
 					</div><!-- .form-group -->
 					<div class="form-group">
-						<?php echo $this->Form->input('modifed', array('class' => 'form-control')); ?>
+						<?php echo $this->Form->input('date', array('class' => 'form-control')); ?>
 					</div><!-- .form-group -->
 					<div class="form-group">
 							<?php echo $this->Form->input('Customer');?>

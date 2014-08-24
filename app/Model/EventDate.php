@@ -25,9 +25,9 @@ class EventDate extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'date' => array(
-			'date' => array(
-				'rule' => array('date'),
+		'event_name' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -35,9 +35,9 @@ class EventDate extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'modifed' => array(
-			'datetime' => array(
-				'rule' => array('datetime'),
+		'date' => array(
+			'date' => array(
+				'rule' => array('date'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -106,5 +106,11 @@ class EventDate extends AppModel {
 			'finderQuery' => '',
 		)
 	);
+
+	public $virtualFields = array(
+	    'name' => 'CONCAT(EventDate.event_name, " ", EventDate.date)'
+	);
+
+	public $displayField = 'name';
 
 }

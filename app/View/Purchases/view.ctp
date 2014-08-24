@@ -55,9 +55,9 @@
 			<?php echo h($purchase['Purchase']['created']); ?>
 			&nbsp;
 		</td>
-</tr><tr>		<td><strong><?php echo __('Modifed'); ?></strong></td>
+</tr><tr>		<td><strong><?php echo __('Modified'); ?></strong></td>
 		<td>
-			<?php echo h($purchase['Purchase']['modifed']); ?>
+			<?php echo h($purchase['Purchase']['modified']); ?>
 			&nbsp;
 		</td>
 </tr>					</tbody>

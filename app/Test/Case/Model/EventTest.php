@@ -15,7 +15,9 @@ class EventTest extends CakeTestCase {
 	public $fixtures = array(
 		'app.event',
 		'app.event_date',
-		'app.purchase'
+		'app.purchase',
+		'app.customer',
+		'app.customers_event_date'
 	);
 
 /**

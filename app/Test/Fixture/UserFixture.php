@@ -43,7 +43,7 @@ class UserFixture extends CakeTestFixture {
  */
 	public $records = array(
 		array(
-			'id' => '53ecd2d5-ee04-4e0b-9869-0169cd6ccd5b',
+			'id' => '53fa0123-be7c-44f2-84fd-34ffcd6ccd5b',
 			'username' => 'Lorem ipsum dolor sit amet',
 			'slug' => 'Lorem ipsum dolor sit amet',
 			'password' => 'Lorem ipsum dolor sit amet',
@@ -51,15 +51,15 @@ class UserFixture extends CakeTestFixture {
 			'email' => 'Lorem ipsum dolor sit amet',
 			'email_verified' => 1,
 			'email_token' => 'Lorem ipsum dolor sit amet',
-			'email_token_expires' => '2014-08-14 15:16:37',
+			'email_token_expires' => '2014-08-24 15:13:39',
 			'tos' => 1,
 			'active' => 1,
-			'last_login' => '2014-08-14 15:16:37',
-			'last_action' => '2014-08-14 15:16:37',
+			'last_login' => '2014-08-24 15:13:39',
+			'last_action' => '2014-08-24 15:13:39',
 			'is_admin' => 1,
 			'role' => 'Lorem ipsum dolor sit amet',
-			'created' => '2014-08-14 15:16:37',
-			'modified' => '2014-08-14 15:16:37'
+			'created' => '2014-08-24 15:13:39',
+			'modified' => '2014-08-24 15:13:39'
 		),
 	);
 

@@ -23,8 +23,7 @@ class Customer extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		)
-		/*
+		),
 		'title' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
@@ -75,7 +74,6 @@ class Customer extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		*/
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -122,5 +120,11 @@ class Customer extends AppModel {
 			'finderQuery' => '',
 		)
 	);
+
+	public $virtualFields = array(
+	    'name' => 'CONCAT(Customer.first_name, " ", Customer.last_name)'
+	);
+
+	public $displayField = 'name';
 
 }
