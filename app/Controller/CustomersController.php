@@ -118,8 +118,8 @@ class CustomersController extends AppController {
 				$this->Session->setFlash(__('The customers have been imported'), 'flash/success');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The customers have not been imported. Please, try again.'), 'flash/error');
-				debug($this->Customer->getImportErrors());
+				$c = count($this->Customer->getImportErrors());
+				$this->Session->setFlash(__($c . ' customers have stopped this process from completing. No customers have been imported. Please, try again.'), 'flash/error');
 			}
 		}
 	}

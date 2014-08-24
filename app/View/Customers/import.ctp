@@ -18,7 +18,7 @@
 	
 	<div id="page-content" class="col-sm-9">
 
-		<h2><?php echo __('Import Customer'); ?></h2>
+		<h2><?php echo __('Import Customers'); ?></h2>
 
 		<div class="customers form">
 		
